@@ -1,9 +1,8 @@
 # Nedomkull Mathematical Modeling Webpage
 
-A modern, production-ready template for building full-stack React applications using React Router.
+The webpage for Nedomkull Mathematical Modeling, built with React and Vite.
 
-Built on `create-react-router v7.9.4`
-
+Deployed as a static site at https://www.nedomkull.com.
 
 ### Installation
 
@@ -31,41 +30,12 @@ Create a production build:
 npm run build
 ```
 
+The production-ready files will be in the `dist` directory, as a static site.
+
 ## Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
+A Github Actions workflow is included to deploy to Github Pages.
+See `.github/workflows/deploy.yml` for configuration details.
 
 ## Styling
 

@@ -12,12 +12,14 @@ export function LandingPage() {
         <div className="w-full p-4" style={{"backgroundColor": "#FF8621"}}>
         </div>
         <img src={`${getBasePath()}/math.jpg`} alt="Mathematics" className="block w-full" />
-        <div className="w-full space-y-6 px-4 py-8 flex flex-row justify-between">
-            <div className="w-full text-center">
+        <div className="w-full space-y-6 px-4 py-8 px-16 flex flex-row justify-between">
+            <div className="flex-1 text-center">
                 <h2 className="text-3xl font-bold">Nedomkull Mathematical Modeling</h2>
             </div>
-            <div className="w-full text-center items-center">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+
+            <div className="text-center items-center">
+                <h3 className="text-2xl">Open Source Initiatives</h3>
+                <div className="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
                     {resources.map(({ owner, repo }) => (
                         <RepoCard key={owner + repo} owner={owner} repo={repo} />
                     ))}
