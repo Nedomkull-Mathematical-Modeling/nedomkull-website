@@ -53,19 +53,6 @@ export default function RepoCard({ owner, repo }: RepoCardProps) {
             </span>
           )}
         </div>
-        <div className="text-gray-400">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            viewBox="0 0 16 16"
-          >
-            <circle cx="8" cy="8" r="1" />
-            <circle cx="2" cy="8" r="1" />
-            <circle cx="14" cy="8" r="1" />
-          </svg>
-        </div>
       </div>
 
       <p className="text-gray-700 text-sm mb-3 text-left">

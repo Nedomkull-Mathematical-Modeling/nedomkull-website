@@ -3,27 +3,23 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "build:static": "react-router build --ssr false --out-dir dist",
-    "dev": "react-router dev",
-    "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "dev": "vite",
+    "build": "vite build",
+    "postbuild": "node ./scripts/copy-404.js",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@react-router/node": "^7.9.2",
-    "@react-router/serve": "^7.9.2",
-    "isbot": "^5.1.31",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.9.2",
-    "lucide-react": ""
+    "react-router-dom": "^7.9.2",
+    "lucide-react": "^0.471.0"
   },
   "devDependencies": {
-    "@react-router/dev": "^7.9.2",
     "@tailwindcss/vite": "^4.1.13",
     "@types/node": "^22",
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^4.3.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2",
     "vite": "^7.1.7",

@@ -1,4 +1,5 @@
 import RepoCard from "../components/repocard";
+import { getBasePath } from "../basePath";
 
 export function LandingPage() {
   return (
@@ -10,17 +11,17 @@ export function LandingPage() {
         </header>
         <div className="w-full p-4" style={{"backgroundColor": "#FF8621"}}>
         </div>
-        <img src="/math.jpg" alt="Mathematics" className="block w-full" />
+        <img src={`${getBasePath()}/math.jpg`} alt="Mathematics" className="block w-full" />
         <div className="w-full space-y-6 px-4 py-8 flex flex-row justify-between">
             <div className="w-full text-center">
                 <h2 className="text-3xl font-bold">Nedomkull Mathematical Modeling</h2>
             </div>
             <div className="w-full text-center items-center">
-                <ul>
-                  {resources.map(({ owner, repo}) => (
-                    <RepoCard key={owner+repo} owner={owner} repo={repo} />
-                  ))}
-                </ul>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-items-center">
+                    {resources.map(({ owner, repo }) => (
+                        <RepoCard key={owner + repo} owner={owner} repo={repo} />
+                    ))}
+                </div>
             </div>
         </div>
       </div>
@@ -32,5 +33,33 @@ const resources = [
     {
         owner: "hbldh",
         repo: "bleak",
-    }
+    },
+    {
+        owner: "Nedomkull-Mathematical-Modeling",
+        repo: "ScenoMorph"
+    },
+    {
+        owner: "hbldh",
+        repo: "hitherdither"
+    },
+    {
+        owner: "hbldh",
+        repo: "pyefd"
+    },
+    {
+        owner: "hbldh",
+        repo: "lspopt"
+    },
+    {
+        owner: "hbldh",
+        repo: "skboost"
+    },
+    {
+        owner: "hbldh",
+        repo: "b2ac"
+    },
+    {
+        owner: "hbldh",
+        repo: "pybankid"
+    },
 ];
